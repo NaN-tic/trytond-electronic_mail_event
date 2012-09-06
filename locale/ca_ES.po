@@ -1,0 +1,15 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:electronic.mail.template,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "help:electronic.mail.template,party:"
+msgid ""
+"Party ID who an email event is logged. Placeholders can be used here. eg. "
+"${record.party.id}"
+msgstr ""
+"ID del tercero para anotar en el historial de eventos. Debe usar expresiones"
+" para encontrar el tercero. Ej, ${record.party.id}"
