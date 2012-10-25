@@ -1,22 +1,23 @@
 #This file is part electronic_mail_event module for Tryton.
 #The COPYRIGHT file at the top level of this repository contains 
 #the full copyright notices and license terms.
+from trytond.pool import Pool, PoolMeta
 
-from trytond.model import ModelView, ModelSQL, fields
-from trytond.pool import Pool
+__all__ = ['PartyEvent']
+__metaclass__ = PoolMeta
 
-class PartyEvent(ModelSQL, ModelView):
+class PartyEvent:
     'Party Event'
-    _name = 'party.event'
+    __name__ = 'party.event'
 
-    def get_resource(self):
-        res = super(PartyEvent, self).get_resource()
-        model_obj = Pool().get('ir.model')
-        model_ids = model_obj.search([
+    @classmethod
+    def get_resource(cls):
+        res = super(PartyEvent, cls).get_resource()
+        Model = Pool().get('ir.model')
+        model_ids = Model.search([
             ('model', '=', 'electronic.mail'),
             ])
-        for model in model_obj.browse(model_ids):
+        for model in Model.browse(model_ids):
             res.append([model.model, model.name])
         return res
 
-PartyEvent()
