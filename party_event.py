@@ -13,11 +13,11 @@ class PartyEvent:
     @classmethod
     def get_resource(cls):
         res = super(PartyEvent, cls).get_resource()
-        Model = Pool().get('ir.model')
-        model_ids = Model.search([
+        pool = Pool()
+        Model = pool.get('ir.model')
+        models = Model.search([
             ('model', '=', 'electronic.mail'),
-            ])
-        for model in Model.browse(model_ids):
+        ])
+        for model in models:
             res.append([model.model, model.name])
         return res
-
