@@ -33,14 +33,14 @@ setup(name='trytonzz_electronic_mail_event',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytonzz-electronic_mail_event",
-    package_dir={'trytonzz.modules.electronic_mail_event': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytond-electronic_mail_event",
+    package_dir={'trytond.modules.electronic_mail_event': '.'},
     packages=[
-        'trytonzz.modules.electronic_mail_event',
-        'trytonzz.modules.electronic_mail_event.tests',
+        'trytond.modules.electronic_mail_event',
+        'trytond.modules.electronic_mail_event.tests',
     ],
     package_data={
-        'trytonzz.modules.electronic_mail_event': info.get('xml', []) \
+        'trytond.modules.electronic_mail_event': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytonzz_electronic_mail_event',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytonzz.modules]
-    electronic_mail_event = trytonzz.modules.electronic_mail_event
+    [trytond.modules]
+    electronic_mail_event = trytond.modules.electronic_mail_event
     """,
     test_suite='tests',
-    test_loader='trytonzz.test_loader:Loader',
+    test_loader='trytond.test_loader:Loader',
 )
