@@ -27,20 +27,20 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_electronic_mail_event',
+setup(name='trytonzz_electronic_mail_event',
     version=info.get('version', '0.0.1'),
     description='Tryton module for electronic mail event',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-electronic_mail_event",
-    package_dir={'trytond.modules.electronic_mail_event': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytonzz-electronic_mail_event",
+    package_dir={'trytonzz.modules.electronic_mail_event': '.'},
     packages=[
-        'trytond.modules.electronic_mail_event',
-        'trytond.modules.electronic_mail_event.tests',
+        'trytonzz.modules.electronic_mail_event',
+        'trytonzz.modules.electronic_mail_event.tests',
     ],
     package_data={
-        'trytond.modules.electronic_mail_event': info.get('xml', []) \
+        'trytonzz.modules.electronic_mail_event': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytond_electronic_mail_event',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytond.modules]
-    electronic_mail_event = trytond.modules.electronic_mail_event
+    [trytonzz.modules]
+    electronic_mail_event = trytonzz.modules.electronic_mail_event
     """,
     test_suite='tests',
-    test_loader='trytond.test_loader:Loader',
+    test_loader='trytonzz.test_loader:Loader',
 )
