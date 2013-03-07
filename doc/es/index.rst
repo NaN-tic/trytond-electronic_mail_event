@@ -16,10 +16,11 @@ En el campo **Tercero** de la plantilla del correo electrónico, escriba la
 expresión Mako para encontrar el identificador del tercero. Por ejemplo:
 
 .. code:: python
+
     ${record.party.id}
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
