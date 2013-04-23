@@ -19,17 +19,6 @@ expresión Mako para encontrar el identificador del tercero. Por ejemplo:
 
     ${record.party.id}
 
-Módulos de los que depende
-==========================
-
-Instalados
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   /electronic_mail/index
-   /electronic_mail_template/index
 
 Dependencias
 ------------
