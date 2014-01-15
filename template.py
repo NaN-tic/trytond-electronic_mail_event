@@ -7,10 +7,9 @@ from trytond.pool import PoolMeta
 __all__ = ['Template']
 __metaclass__ = PoolMeta
 
-class Template:
-    'Email Template'
-    __name__ = 'electronic.mail.template'
 
+class Template:
+    __name__ = 'electronic.mail.template'
     party = fields.Char('Party',
         help='Party ID who an email event is logged. Placeholders can be used here. eg. ${record.party.id}')
 

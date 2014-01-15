@@ -6,8 +6,8 @@ from trytond.pool import Pool, PoolMeta
 __all__ = ['PartyEvent']
 __metaclass__ = PoolMeta
 
+
 class PartyEvent:
-    'Party Event'
     __name__ = 'party.event'
 
     @classmethod
